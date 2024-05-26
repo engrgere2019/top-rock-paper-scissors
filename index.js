@@ -17,12 +17,12 @@
 // console.log(getComputerChoice());
 
 // Create a function to get player choice
-function getPlayerChoice() {
-    let playerChoice = prompt("Enter any word from: rock, paper and scissors: ").toLowerCase();
-    while(playerChoice !== "rock" && playerChoice !== "paper" && playerChoice !== "scissors"){
-        playerChoice = prompt("Enter any word from: rock, paper and scissors: ").toLowerCase(); 
+function getHumanChoice() {
+    let humanChoice = prompt("Enter any word from: rock, paper and scissors: ").toLowerCase();
+    while(humanChoice !== "rock" && humanChoice !== "paper" && humanChoice !== "scissors"){
+        humanChoice = prompt("Enter any word from: rock, paper and scissors: ").toLowerCase(); 
     }
-    return(playerChoice);
+    return(humanChoice);
 }
 // console.log(getPlayerChoice());
 
@@ -37,6 +37,6 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-const playerSelection = getPlayerChoice();
+const playerSelection = getHumanChoice();
 const computerSelection = getComputerChoice()
 console.log(playRound(playerSelection, computerSelection));
