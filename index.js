@@ -24,19 +24,33 @@ function getHumanChoice() {
     }
     return(humanChoice);
 }
-// console.log(getPlayerChoice());
+// console.log(gethumanChoice());
+
+// Declaring Players score variables
+
+let humanScore = 0;
+let computerScore = 0;
 
 // Create a function to play a round
 function playRound(humanSelection, computerSelection) {
     if((humanSelection === "rock" && computerSelection === "paper") || (humanSelection === "paper" && computerSelection === "scissors") || (humanSelection === "scissors" && computerSelection === "rock") ) {
-        return "You lost! Play another round.";
+        computerScore += 1;
+        return `You lost! Play another round. || Scores: Computer: ${computerScore} - Human: ${humanScore}`;
     } else if((humanSelection === "paper" && computerSelection === "rock") || (humanSelection === "scissors" && computerSelection === "paper") || (humanSelection === "rock" && computerSelection === "scissors") ) {
-        return "You won! Play another round.";
+        humanScore += 1;
+        return `You won! Play another round. || Scores: Computer: ${computerScore} - Human: ${humanScore}`;
     } else {
-        return "Tie! Play another round."
+        return `Tie! Play another round. || Scores: Computer: ${computerScore} - Human: ${humanScore}`;
     }
 }
 
 // const playerSelection = getHumanChoice();
 // const computerSelection = getComputerChoice()
 // console.log(playRound(playerSelection, computerSelection));
+
+// Creating a function to play the game 5 times.
+
+const playGame = () => {
+
+}
+
