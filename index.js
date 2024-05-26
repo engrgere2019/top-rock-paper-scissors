@@ -51,6 +51,20 @@ function playRound(humanSelection, computerSelection) {
 // Creating a function to play the game 5 times.
 
 const playGame = () => {
-
+    // Playing 5 rounds
+    console.log(playRound(getHumanChoice(), getComputerChoice()));
+    console.log(playRound(getHumanChoice(), getComputerChoice()));
+    console.log(playRound(getHumanChoice(), getComputerChoice()));
+    console.log(playRound(getHumanChoice(), getComputerChoice()));
+    console.log(playRound(getHumanChoice(), getComputerChoice()));
+    // Comparing Scores to declare a winner after 5 rounds
+    if(computerScore > humanScore){
+        alert(`GAME OVER! The Computer won and the Final Score is: Computer: ${computerScore} - You: ${humanScore}`) 
+    }else if(computerScore < humanScore){
+        alert(`GAME OVER! You won and the Final Score is: Computer: ${computerScore} - You: ${humanScore}`)
+    }else{
+        alert(`GAME OVER! The Game is a tie and the Final Score is: Computer: ${computerScore} - You: ${humanScore}`)
+    }
 }
 
+console.log(playGame());
