@@ -27,16 +27,16 @@ function getHumanChoice() {
 // console.log(getPlayerChoice());
 
 // Create a function to play a round
-function playRound(playerSelection, computerSelection) {
-    if((playerSelection === "rock" && computerSelection === "paper") || (playerSelection === "paper" && computerSelection === "scissors") || (playerSelection === "scissors" && computerSelection === "rock") ) {
+function playRound(humanSelection, computerSelection) {
+    if((humanSelection === "rock" && computerSelection === "paper") || (humanSelection === "paper" && computerSelection === "scissors") || (humanSelection === "scissors" && computerSelection === "rock") ) {
         return "You lost! Play another round.";
-    } else if((playerSelection === "paper" && computerSelection === "rock") || (playerSelection === "scissors" && computerSelection === "paper") || (playerSelection === "rock" && computerSelection === "scissors") ) {
+    } else if((humanSelection === "paper" && computerSelection === "rock") || (humanSelection === "scissors" && computerSelection === "paper") || (humanSelection === "rock" && computerSelection === "scissors") ) {
         return "You won! Play another round.";
     } else {
         return "Tie! Play another round."
     }
 }
 
-const playerSelection = getHumanChoice();
-const computerSelection = getComputerChoice()
-console.log(playRound(playerSelection, computerSelection));
+// const playerSelection = getHumanChoice();
+// const computerSelection = getComputerChoice()
+// console.log(playRound(playerSelection, computerSelection));
